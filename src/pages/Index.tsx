@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Progress } from '@/components/ui/progress';
@@ -62,7 +62,7 @@ const prizes = [
 ];
 
 export default function Index() {
-  const [totalStickers] = useState(collectedStickers.length);
+  const [totalStickers] = React.useState(collectedStickers.length);
   const maxStickers = 50;
   const progress = (totalStickers / maxStickers) * 100;
 
